@@ -5,6 +5,7 @@
   <td :style="{minWidth:minWidth,width:width,textAlign:'left'}">
       <div class="c-table-column" style="border-bottom:1px solid #ccc;padding:20px;background:#eee">
         {{label}}
+        
       </div>
       <div v-for="(itme,k) in this.$parent.tabData" :key="k" style="border-bottom:1px solid #ccc;padding:20px;">
         <div >{{itme[prop]}}</div>

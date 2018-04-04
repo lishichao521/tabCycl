@@ -4,7 +4,8 @@
     <br>
     <br>
     <c-table :tabData="tableData" border>
-      <c-table-column label="电影" min-width="100px" prop='dy'></c-table-column><c-table-column label="音乐" prop='yy'></c-table-column>
+      <c-table-column label="电影" min-width="100px" prop='dy'></c-table-column>
+      <c-table-column label="音乐" prop='yy'></c-table-column>
       <c-table-column label="美剧" prop='mj'></c-table-column>
       <c-table-column label="动漫" prop='dm'></c-table-column>
       <c-table-column label="体育" prop='ty'>
@@ -17,32 +18,34 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       aa: [],
-      tableData: [{
-        yy: '空空如也',
-        dy: '变形金刚',
-        mj: '权利的游戏',
-        dm: '斗罗大陆',
-        ty: '足球',
-      }, {
-        yy: '桃花朵朵开',
-        dy: '蜘蛛侠',
-        mj: '行尸走肉',
-        dm: '海贼王',
-        ty: '篮球',
-      }]
-    }
+      tableData: [
+        {
+          yy: "空空如也",
+          dy: "变形金刚",
+          mj: "权利的游戏",
+          dm: "斗罗大陆",
+          ty: "足球"
+        },
+        {
+          yy: "桃花朵朵开",
+          dy: "蜘蛛侠",
+          mj: "行尸走肉",
+          dm: "海贼王",
+          ty: "篮球"
+        }
+      ]
+    };
   },
-  mounted() {
-  }
-}
+  mounted() {}
+};
 </script>
 
 <style>
-*{
+* {
   padding: 0;
   margin: 0;
 }
