@@ -28,7 +28,6 @@ export default {
     }
   },
   mounted() {
-    // this.thWith = 100 / this.$parent.$children.length
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div class="c-table">
         <table :style="{ height: height+'px'}">
-             <slot></slot> 
+            <slot></slot>
         </table>
     </div>
 </template>
@@ -13,7 +13,7 @@ export default {
     props: {
         tabData: {
             type: Array,
-            default: function () {
+            default: function() {
                 return []
             }
         },
@@ -27,11 +27,8 @@ export default {
         }
     },
     components: {
-        // <my-component> 将只在父组件模板中可用
-        // 'c-table-column': Child
     },
     mounted() {
-        // console.log(this.$children)
     }
 }
 </script>
@@ -39,14 +36,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 table {
-  width: 100%;
-  border-collapse:collapse;
-  /*border: 1px solid red;*/
+    width: 100%;
+    border-collapse: collapse;
+    /*border: 1px solid red;*/
 }
+
 input,
 button,
 select,
 textarea {
-  outline: none;
+    outline: none;
 }
 </style>

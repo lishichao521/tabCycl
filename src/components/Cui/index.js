@@ -7,9 +7,4 @@ export const MyTable = {
         Vue.component('c-table-column', tableColumn)
     }
 }
-// export const MytableColumn = {
-//     install: function (Vue) {
-//         Vue.component('c-table-column', tableColumn)
-//     }
-// }
 // 导出组件
