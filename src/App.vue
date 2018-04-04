@@ -5,7 +5,7 @@
     <br>
     <c-table :tabData="tableData" border>
       <c-table-column label="电影" min-width="100px" prop='dy'></c-table-column>
-      <c-table-column label="音乐" prop='yy'></c-table-column>
+      <c-table-column label="音乐" prop='yy'> </c-table-column>
       <c-table-column label="美剧" prop='mj'></c-table-column>
       <c-table-column label="动漫" prop='dm'></c-table-column>
       <c-table-column label="体育" prop='ty'>
