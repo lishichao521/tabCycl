@@ -1,5 +1,5 @@
 <template>
-    <button :class="button" @click="aa" @mousedown="scaleFunc" @mouseup="scaleFunc1">{{name}}</button>
+  <button :style="{background:bg}" :class="button" @click="clickButton" @mousedown="scaleFunc" @mouseup="scaleFunc1">{{name}}</button>
 </template>
 <script>
 export default {
@@ -16,25 +16,65 @@ export default {
   name: "c-button",
   data() {
     return {
+      bg: null,
       button: {
         "c-button": this.type == true,
         "c-button-primary": this.type == "primary",
         "c-button-success": this.type == "success",
         "c-button-info": this.type == "info",
         "c-button-warning": this.type == "warning",
-        "c-button-danger": this.type == "danger"
+        "c-button-danger": this.type == "danger",
+        "c-button-text": this.type == "text"
       }
     };
   },
   methods: {
-    aa() {
-      this.$emit("click", "a");
+    clickButton() {
+      this.$emit("click");
     },
     scaleFunc() {
-      //   this.cButton.backgroundColor = "#409eff";
+      // switch (this.type) {
+      //   case true:
+      //     this.bg = "#fff";
+      //     break;
+      //   case "primary":
+      //     this.bg = "#409eff";
+      //     break;
+      //   case "success":
+      //     this.bg = "#67c23a";
+      //     break;
+      //   case "info":
+      //     this.bg = "#909399";
+      //     break;
+      //   case "warning":
+      //     this.bg = "#e6a23c";
+      //     break;
+      //   case "danger":
+      //     this.bg = "#f56c6c";
+      //     break;
+      // }
     },
     scaleFunc1() {
-      //   this.cButton.backgroundColor = "#66b1ff";
+      // switch (this.type) {
+      //   case true:
+      //     this.bg = "#ecf5ff";
+      //     break;
+      //   case "primary":
+      //     this.bg = "#66b1ff";
+      //     break;
+      //   case "success":
+      //     this.bg = "#85ce61";
+      //     break;
+      //   case "info":
+      //     this.bg = "#a6a9ad";
+      //     break;
+      //   case "warning":
+      //     this.bg = "#ebb563";
+      //     break;
+      //   case "danger":
+      //     this.bg = "#f78989";
+      //     break;
+      // }
     }
   }
 };
@@ -61,9 +101,6 @@ export default {
   margin: 0;
   transition: 0.1s;
   font-weight: 500;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
   padding: 12px 20px;
   font-size: 14px;
   border-radius: 4px;
@@ -128,5 +165,15 @@ export default {
   background: #f78989;
   border-color: #f78989;
   color: #fff;
+}
+.c-button-text {
+  background: #fff;
+  border: 1px solid #fff;
+  color: #409eff;
+  cursor: pointer;
+}
+.c-button-text:focus,
+.c-button-text:hover {
+  color: #66b1ff;
 }
 </style>

@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 // import router from './router'
-import { MyTable } from './components/Cui'
+import MyTable from './components/Cui'
 Vue.use(MyTable);
 Vue.config.productionTip = false
 
