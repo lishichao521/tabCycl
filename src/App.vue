@@ -3,9 +3,10 @@
     <!-- <router-view/> -->
     <br>
     <c-button name="添加一列" type="primary" @click="addList"></c-button>
+    <c-button name="显示loading" type="primary" @click="loading = !loading"></c-button>
     <br>
     <br>
-    <c-table :tabData="tableData" border >
+    <c-table :tabData="tableData" border v-loading="loading">
       <c-table-column label="电影" min-width="50px" prop='dy'></c-table-column>
       <c-table-column label="音乐" prop='yy'> </c-table-column>
       <c-table-column label="美剧" prop='mj'></c-table-column>
@@ -20,23 +21,11 @@
     </c-table>
     <br>
     <c-button></c-button>
-    {{butCode}}
-    <br>
     <c-button name="主要按钮" type="primary"></c-button>
-    {{butCode1}}
-    <br>
     <c-button name="成功按钮" type="success"></c-button>
-    {{butCode2}}
-    <br>
     <c-button name="信息按钮" type="info"></c-button>
-    {{butCode3}}
-    <br>
     <c-button name="警告按钮" type="warning"></c-button>
-    {{butCode4}}
-    <br>
     <c-button name="危险按钮" type="danger"></c-button>
-    {{butCode5}}
-    <br>
   </div>
 </template>
 
@@ -45,6 +34,7 @@ export default {
   name: "App",
   data() {
     return {
+      loading: true,
       butCode:'<c-button></c-button>',
       butCode1:'<c-button name="主要按钮" type="primary"></c-button>',
       butCode2:'<c-button name="成功按钮" type="success"></c-button>',
