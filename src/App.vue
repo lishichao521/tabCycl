@@ -34,7 +34,7 @@ export default {
   name: "App",
   data() {
     return {
-      loading: true,
+      loading: false,
       butCode:'<c-button></c-button>',
       butCode1:'<c-button name="主要按钮" type="primary"></c-button>',
       butCode2:'<c-button name="成功按钮" type="success"></c-button>',

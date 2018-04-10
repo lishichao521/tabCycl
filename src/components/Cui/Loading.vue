@@ -26,7 +26,6 @@ export default {
   },
   methods: {},
   mounted() {
-      this.elem = document.getElementById('loadings')
   }
 };
 </script>
