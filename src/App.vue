@@ -119,19 +119,4 @@ textarea {
 textarea {
   resize: none;
 }
-.loading {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-}
-.loading-box {
-  color: #409eff;
-  top: 50%;
-  margin-top: -21px;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-}
 </style>
