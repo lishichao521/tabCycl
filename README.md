@@ -5,6 +5,12 @@
 ## Build Setup
 
 ``` bash
+
+main.js文件引入
+import xxx from 'vue-lcui'
+import 'vue-lcui/dist/vue-lcui.min.css'
+Vue.use(xxx);
+
 <template>
   <div id="app">
     <!-- <router-view/> -->
