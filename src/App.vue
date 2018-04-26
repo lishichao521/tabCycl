@@ -6,7 +6,7 @@
     <c-button name="显示loading" type="primary" @click="loading = !loading"></c-button>
     <br>
     <br>
-    <c-table :tabData="tableData" border v-loading="loading">
+    <c-table :tabData="tableData" border  v-loading="loading" loaing='加载中'>
       <c-table-column label="电影" min-width="50px" prop='dy'></c-table-column>
       <c-table-column label="音乐" prop='yy'> </c-table-column>
       <c-table-column label="美剧" prop='mj'></c-table-column>
@@ -26,6 +26,9 @@
     <c-button name="信息按钮" type="info"></c-button>
     <c-button name="警告按钮" type="warning"></c-button>
     <c-button name="危险按钮" type="danger"></c-button>
+    <div>
+      <div>faefae</div>
+    </div>
   </div>
 </template>
 

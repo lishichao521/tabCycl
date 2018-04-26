@@ -10,7 +10,7 @@
                     <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite" />
                 </path>
             </svg>
-            <p>拼命加载中</p>
+            <p>{{elem}}</p>
         </div>
     </div>
 </template>
@@ -21,11 +21,12 @@ export default {
   name: "loading",
   data() {
     return {
-        elem:''
+        elem:'拼命加载中'
     };
   },
   methods: {},
   mounted() {
+      console.log(this)
   }
 };
 </script>

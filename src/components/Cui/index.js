@@ -10,6 +10,7 @@ const MyTable = {
     Vue.component("c-button", button);
     Vue.directive("loading", {
       update: function (el, binding, vnode, oldVnode) {
+        el.style.position = "relative"
         if (binding.value) {
           let _p = document.createElement("p");
           _p.setAttribute("id", "aa");

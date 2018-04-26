@@ -3,10 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 // import router from './router'
-// import MyTable from './components/Cui'
-import Lcui from 'vue-lcui'
-import 'vue-lcui/dist/vue-lcui.min.css'
-Vue.use(Lcui);
+import MyTable from './components/Cui'
+Vue.use(MyTable);
+// import Lcui from 'vue-lcui'
+// import 'vue-lcui/dist/vue-lcui.min.css'
+// Vue.use(Lcui);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
