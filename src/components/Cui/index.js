@@ -2,12 +2,14 @@ import Table from "./c-table";
 import tableColumn from "./c-table-column";
 import button from "./c-button";
 import Loadings from "./Loading";
+import NavTop from "./NavTop";
 
 const MyTable = {
   install: function (Vue) {
     Vue.component("c-table", Table);
     Vue.component("c-table-column", tableColumn);
     Vue.component("c-button", button);
+    Vue.component("c-NavTop", NavTop);
     Vue.directive("loading", {
       update: function (el, binding, vnode, oldVnode) {
         el.style.position = "relative"

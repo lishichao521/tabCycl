@@ -3,8 +3,8 @@
     <div :style="title" style="padding-left:20px;">
       {{label}}
       <span v-if="sortable" @click="sortFunc" :style="{cursor:'pointer'}">
-        <span :class="{up:at,down:!at}">↑</span>
-        <span :class="{up:!at,down:at}">↓</span>
+        <span :class="{up:at}">↑</span>
+        <span :class="{up:!at}">↓</span>
       </span>
     </div>
     <div v-for="(itme,k) in $parent.tabData" :key="k" style="border-bottom:1px solid #eee;line-height:50px; min-height:50px;padding-left:20px;">
