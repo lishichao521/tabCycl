@@ -28,26 +28,36 @@
       <h1>用法</h1>
       <textarea style="width:1200px;height:510px;font-size:20px;" disabled="disabled">
 
-
         <template>
           <c-NavTop :navTopData="navTopData"></c-NavTop>
         </template>
 
         <script>
-          export default {
-            data() {
-              return {
-                navTopData: [
-                  { methodName: "首页" },
-                  { methodName: "组织管理" },
-                  { methodName: "用户管理" },
-                  { methodName: "资源管理" },
-                  { methodName: "财务管理" },
-                  { methodName: "内容管理" }
-                ]
-              }
+        export default {
+          data() {
+            return {
+              navTopData: [{
+                  methodName: "首页"
+                },
+                {
+                  methodName: "组织管理"
+                },
+                {
+                  methodName: "用户管理"
+                },
+                {
+                  methodName: "资源管理"
+                },
+                {
+                  methodName: "财务管理"
+                },
+                {
+                  methodName: "内容管理"
+                }
+              ]
             }
           }
+        }
         </script>
       </textarea>
       <h1>属性</h1>
@@ -234,14 +244,16 @@
 export default {
   name: "NavTop",
   props: {
-    props:{
+    props: {
       type: Object,
-      default:{
-        label:'methodName',
-        value:'methodNameId',
+      default: function() {
+        return {
+          label: "methodName",
+          value: "methodNameId"
+        };
       }
     },
-    isFixedNav:{
+    isFixedNav: {
       type: [Boolean],
       default: false
     },
@@ -253,12 +265,12 @@ export default {
       type: Array,
       default: function() {
         return [
-          { methodName: "首页",id:1 },
-          { methodName: "组织管理", id:2},
-          { methodName: "用户管理", id:3 },
-          { methodName: "资源管理", id:4 },
-          { methodName: "财务管理", id:5 },
-          { methodName: "内容管理", id:6 }
+          { methodName: "首页", id: 1 },
+          { methodName: "组织管理", id: 2 },
+          { methodName: "用户管理", id: 3 },
+          { methodName: "资源管理", id: 4 },
+          { methodName: "财务管理", id: 5 },
+          { methodName: "内容管理", id: 6 }
         ];
       }
     },
@@ -282,15 +294,16 @@ export default {
       type: [Number],
       default: 0
     },
-    userName:{
+    userName: {
       type: [String],
       default: "userName"
     },
     userImg: {
       type: [String],
-      default: "http://f.elnplus.com/data/images/user/photo/1347379288888909_f5f689bad0d54e7b9872146765484335.jpg"
+      default:
+        "http://f.elnplus.com/data/images/user/photo/1347379288888909_f5f689bad0d54e7b9872146765484335.jpg"
     },
-    isShowUser:{
+    isShowUser: {
       type: [Boolean],
       default: true
     },
@@ -302,14 +315,14 @@ export default {
       type: [Number],
       default: 240
     },
-    isShowLogo:{
+    isShowLogo: {
       type: [Boolean],
       default: true
     }
   },
   data() {
     return {
-      navTopDatas:[],
+      navTopDatas: [],
       isEsc: false,
       ishoverStyle: [false],
       activeIndexs: this.activeIndex,
@@ -329,8 +342,7 @@ export default {
       this.$emit("clickNavTop", e, k);
     }
   },
-  created() {
-  },
+  created() {},
   mounted() {},
   watch: {
     activeIndex: function(v1, v2) {
@@ -358,7 +370,7 @@ tr {
 .transition {
   transition: all 0.5s;
 }
-.fixed{
+.fixed {
   position: fixed;
   top: 0;
 }

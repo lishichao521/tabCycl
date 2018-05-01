@@ -30,6 +30,10 @@
       <br>
       <c-NavTop :props="defaultProps"></c-NavTop>
     </div>
+    <div>
+      <br>
+      <!-- <c-LeftNav></c-LeftNav> -->
+    </div>
   </div>
 </template>
 
@@ -38,9 +42,9 @@ export default {
   name: "App",
   data() {
     return {
-      defaultProps:{
-        label:'methodName',
-        value:'methodNameId',
+      defaultProps: {
+        label: "methodName",
+        value: "methodNameId"
       },
       loading: false,
       butCode: "<c-button></c-button>",

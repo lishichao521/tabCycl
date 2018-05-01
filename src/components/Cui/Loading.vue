@@ -10,7 +10,7 @@
                     <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite" />
                 </path>
             </svg>
-            <p>{{elem}}</p>
+            <p id="loading-text">{{elem}}</p>
         </div>
     </div>
 </template>
@@ -26,7 +26,6 @@ export default {
   },
   methods: {},
   mounted() {
-      console.log(this)
   }
 };
 </script>
