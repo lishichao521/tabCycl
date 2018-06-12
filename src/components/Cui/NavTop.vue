@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div style="width:1200px;margin:auto;">
+    <div :style="{'height':H ? '100%':'0'}" style="width:1200px;margin:auto;overflow: hidden;">
       <h1>用法</h1>
       <textarea style="width:1200px;height:510px;font-size:20px;" disabled="disabled">
 
@@ -238,6 +238,10 @@
         </tbody>
       </table>
     </div>
+    <div style="text-align:center">
+      <br/>
+      <a href="javaScript:" @click="H = !H">{{H ? '关闭代码' : '显示代码'}}</a>
+    </div>
   </div>
 </template>
 <script>
@@ -246,7 +250,7 @@ export default {
   props: {
     props: {
       type: Object,
-      default: function() {
+      default: function () {
         return {
           label: "methodName",
           value: "methodNameId"
@@ -263,7 +267,7 @@ export default {
     },
     navTopData: {
       type: Array,
-      default: function() {
+      default: function () {
         return [
           { methodName: "首页", id: 1 },
           { methodName: "组织管理", id: 2 },
@@ -322,6 +326,7 @@ export default {
   },
   data() {
     return {
+      H:false,
       navTopDatas: [],
       isEsc: false,
       ishoverStyle: [false],
@@ -342,10 +347,10 @@ export default {
       this.$emit("clickNavTop", e, k);
     }
   },
-  created() {},
-  mounted() {},
+  created() { },
+  mounted() { },
   watch: {
-    activeIndex: function(v1, v2) {
+    activeIndex: function (v1, v2) {
       this.activeIndexs = v1;
     }
   }

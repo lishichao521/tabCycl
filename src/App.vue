@@ -17,7 +17,6 @@
           <c-button name="删除" type="text" @click="delList(scope.index)"></c-button>
         </template>
       </c-table-column>
-      <!-- <c-table-column label="电影" slot="content" slot-scope="slotProps" :keys="slotProps.content.yy"></c-table-column> -->
     </c-table>
     <br>
     <c-button></c-button>
