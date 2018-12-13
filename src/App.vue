@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <router-view/> -->
-    <br>
+    <!-- <br>
     <c-button name="添加一列" type="primary" @click="addList"></c-button>
     <c-button name="显示loading" type="primary" @click="loading = !loading"></c-button>
     <br>
@@ -28,11 +28,8 @@
     <div>
       <br>
       <c-NavTop :props="defaultProps"></c-NavTop>
-    </div>
-    <div>
-      <br>
-      <!-- <c-LeftNav></c-LeftNav> -->
-    </div>
+    </div>-->
+    <c-LeftNav></c-LeftNav>
   </div>
 </template>
 
@@ -104,7 +101,7 @@ export default {
   margin: 0;
 }
 #app {
-  width: 1200px;
+  /* width: 1200px; */
   height: 100%;
   margin: auto;
 }
