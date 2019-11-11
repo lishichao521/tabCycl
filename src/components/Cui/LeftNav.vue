@@ -1,66 +1,26 @@
 <template>
-    <div
-        class="nav_box"
-        :style="{background: BGColor, color: initTcolor,top: menuTop}"
-        @mouseleave="mouseleaveNav"
-    >
-        <ul
-            class="nav_content_ul boxSizing fl"
-            :style="{'width': menuW+'px'}"
-            v-for="(time_ul,F)  in childrenNum+1"
-            :key="time_ul[props.value]"
-        >
-            <li
-                class="cursor nav_list boxSizing text_overflow"
-                v-for="(time,W) in  childrenData[F]"
-                :key="time[props.value]"
-                :style="{color: W == num[F] ? ATcolor :'',height: menuH+'px', 'line-height':  menuH+'px'}"
-                @mouseenter="mouseenterLi(F,W,time[props.children])"
-                @click="clickChilMenu(F,W,time[props.children],time)"
-            >
+    <div class="nav_box" :style="{background: BGColor, color: initTcolor,top: menuTop}" @mouseleave="mouseleaveNav">
+        <ul class="nav_content_ul boxSizing fl" :style="{'width': menuW+'px'}" v-for="(time_ul,F)  in childrenNum+1" :key="time_ul[props.value]">
+            <li class="cursor nav_list boxSizing text_overflow" v-for="(time,W) in  childrenData[F]" :key="time[props.value]" :style="{color: W == num[F] ? ATcolor :'',height: menuH+'px', 'line-height':  menuH+'px'}" @mouseenter="mouseenterLi(F,W,time[props.children])" @click="clickChilMenu(F,W,time[props.children],time)">
                 <span class="icons fl">
-                    <img
-                        :src="time.url"
-                        alt=""
-                        srcset=""
-                    >
+                    <img :src="time.url" alt srcset />
                 </span>
                 <span>
-                    <span
-                        :style="{width: menuW-100 +'px' }"
-                        class="menuTitle text_overflow"
-                        v-show="isFold"
-                    >
-                        {{time[props.label]}}
-                    </span>
+                    <span :style="{width: menuW-100 +'px' }" class="menuTitle text_overflow" v-show="isFold">{{time[props.label]}}</span>
                 </span>
 
                 <span v-show="isFold && time[props.children].length">
-                    <svg
-                        :style="{'margin-top': menuH - 35 +'px'}"
-                        t="1544706884297"
-                        class="icon fr"
-                        fill="#ccc"
-                        viewBox="0 0 1024 1024"
-                        version="1.1"
-                        p-id="1226"
-                        width="20"
-                        height="20"
-                    >
+                    <svg :style="{'margin-top': menuH - 35 +'px'}" t="1544706884297" class="icon fr" fill="#ccc" viewBox="0 0 1024 1024" version="1.1" p-id="1226" width="20" height="20">
                         <path
                             d="M312.888889 995.555556c-17.066667 0-28.444444-5.688889-39.822222-17.066667-22.755556-22.755556-17.066667-56.888889 5.688889-79.644445l364.088888-329.955555c11.377778-11.377778 17.066667-22.755556 17.066667-34.133333 0-11.377778-5.688889-22.755556-17.066667-34.133334L273.066667 187.733333c-22.755556-22.755556-28.444444-56.888889-5.688889-79.644444 22.755556-22.755556 56.888889-28.444444 79.644444-5.688889l364.088889 312.888889c34.133333 28.444444 56.888889 73.955556 56.888889 119.466667s-17.066667 85.333333-51.2 119.466666l-364.088889 329.955556c-11.377778 5.688889-28.444444 11.377778-39.822222 11.377778z"
                             p-id="1227"
-                        ></path>
+                        />
                     </svg>
                 </span>
             </li>
         </ul>
         <div class="clear"></div>
-        <div
-            class="dock_bottom"
-            :style="{'width': menuW+'px'}"
-            v-show="isFold"
-        >欢迎咨询10086</div>
+        <div class="dock_bottom" :style="{'width': menuW+'px'}" v-show="isFold">欢迎咨询10086</div>
     </div>
 </template>
 <script>
@@ -304,7 +264,7 @@ export default {
         },
         // 鼠标移出
         mouseleaveNav() {
-            if (this.isFold === false) return;
+            // if (this.isFold === false) return;
             // this.maxBoxW.style.width = this.menuW + "px";
             // this.num = [];
         }
