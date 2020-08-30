@@ -326,7 +326,7 @@ export default {
   },
   data() {
     return {
-      H:false,
+      H:true,
       navTopDatas: [],
       isEsc: false,
       ishoverStyle: [false],
