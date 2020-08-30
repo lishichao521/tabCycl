@@ -1,36 +1,38 @@
 <template>
     <div id="app">
         <!-- <router-view/> -->
-        <!-- <br>
-    <c-button name="添加一列" type="primary" @click="addList"></c-button>
-    <c-button name="显示loading" type="primary" @click="loading = !loading"></c-button>
-    <br>
-    <br>
-    <c-table :tabData="tableData" border v-loading="loading" loaing='加载中'>
-      <c-table-column label="电影" min-width="50px" prop='dy'></c-table-column>
-      <c-table-column label="音乐" prop='yy'> </c-table-column>
-      <c-table-column label="美剧" prop='mj'></c-table-column>
-      <c-table-column label="动漫" prop='dm'></c-table-column>
-      <c-table-column label="体育" prop='ty'></c-table-column>
-      <c-table-column label="操作" sortable>
-        <template slot-scope="scope">
-          <c-button name="删除" type="text" @click="delList(scope.index)"></c-button>
-        </template>
-      </c-table-column>
-    </c-table>
-    <br>
-    <c-button></c-button>
-    <c-button name="主要按钮" type="primary"></c-button>
-    <c-button name="成功按钮" type="success"></c-button>
-    <c-button name="信息按钮" type="info"></c-button>
-    <c-button name="警告按钮" type="warning"></c-button>
-    <c-button name="危险按钮" type="danger"></c-button>
-    <div>
-      <br>
-      <c-NavTop :props="defaultProps"></c-NavTop>
-    </div>-->
-        <span @click="isFold = true">展开</span>
-        <span @click="isFold = false">收起</span>
+        <br>
+        <c-button name="添加一列" type="primary" @click="addList"></c-button>
+        <c-button name="显示loading" type="primary" @click="loading = !loading"></c-button>
+        <br>
+        <br>
+        <c-table :tabData="tableData" border v-loading="loading" loaing='加载中'>
+            <c-table-column label="电影" min-width="50px" prop='dy'></c-table-column>
+            <c-table-column label="音乐" prop='yy'> </c-table-column>
+            <c-table-column label="美剧" prop='mj'></c-table-column>
+            <c-table-column label="动漫" prop='dm'></c-table-column>
+            <c-table-column label="体育" prop='ty'></c-table-column>
+            <c-table-column label="操作" sortable>
+                <template slot-scope="scope">
+                    <c-button name="删除" type="text" @click="delList(scope.index)"></c-button>
+                </template>
+            </c-table-column>
+        </c-table>
+        <br>
+        <c-button></c-button>
+        <c-button name="主要按钮" type="primary"></c-button>
+        <c-button name="成功按钮" type="success"></c-button>
+        <c-button name="信息按钮" type="info"></c-button>
+        <c-button name="警告按钮" type="warning"></c-button>
+        <c-button name="危险按钮" type="danger"></c-button>
+        <div>
+            <br>
+            <c-NavTop :props="defaultProps"></c-NavTop>
+        </div>
+        <div>
+            <span @click="isFold = true">展开</span>
+            <span @click="isFold = false">收起</span>
+        </div>
         <c-LeftNav :isFold="isFold" @menuClick="menuClick"></c-LeftNav>
     </div>
 </template>
@@ -93,11 +95,11 @@ export default {
             let num = parseInt(Math.random() * this.tableData.length + 1);
             this.tableData.push(this.tableData[num - 1]);
         },
-        menuClick(a,b,c){
-            console.log(a,b,c)
+        menuClick(a, b, c) {
+            console.log(a, b, c)
         }
     },
-    mounted() {}
+    mounted() { }
 };
 </script>
 
